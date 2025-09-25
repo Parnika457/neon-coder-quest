@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        orbitron: ['Orbitron', 'monospace'],
+        exo: ['Exo', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +61,18 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        'gradient-cyber': 'var(--gradient-cyber)',
+        'gradient-neon': 'var(--gradient-neon)',
+        'gradient-electric': 'var(--gradient-electric)',
+        'gradient-dark': 'var(--gradient-dark)',
+      },
+      boxShadow: {
+        'neon': 'var(--shadow-neon)',
+        'blue': 'var(--shadow-blue)',
+        'violet': 'var(--shadow-violet)',
+        'cyber': 'var(--shadow-cyber)',
       },
       borderRadius: {
         lg: "var(--radius)",

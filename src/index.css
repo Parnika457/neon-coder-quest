@@ -2,95 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Cyberpunk Gamified Career Simulator Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Cyberpunk Color Palette */
+    --background: 10 10% 8%;
+    --foreground: 290 100% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 264 15% 12%;
+    --card-foreground: 290 100% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 264 15% 12%;
+    --popover-foreground: 290 100% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 316 100% 65%; /* Neon Pink */
+    --primary-foreground: 10 10% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 225 100% 70%; /* Electric Blue */
+    --secondary-foreground: 10 10% 8%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 270 100% 75%; /* Violet */
+    --accent-foreground: 10 10% 8%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 264 15% 15%;
+    --muted-foreground: 290 20% 65%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 290 100% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 264 30% 25%;
+    --input: 264 30% 18%;
+    --ring: 316 100% 65%;
 
-    --radius: 0.5rem;
+    --radius: 0.8rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Cyberpunk Gradients */
+    --gradient-cyber: linear-gradient(135deg, hsl(316 100% 65%), hsl(270 100% 75%));
+    --gradient-neon: linear-gradient(45deg, hsl(225 100% 70%), hsl(316 100% 65%));
+    --gradient-electric: linear-gradient(90deg, hsl(225 100% 70%), hsl(270 100% 75%));
+    --gradient-dark: linear-gradient(180deg, hsl(264 15% 12%), hsl(10 10% 8%));
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Cyberpunk Shadows & Glows */
+    --shadow-neon: 0 0 20px hsl(316 100% 65% / 0.4);
+    --shadow-blue: 0 0 20px hsl(225 100% 70% / 0.4);
+    --shadow-violet: 0 0 20px hsl(270 100% 75% / 0.4);
+    --shadow-cyber: 0 4px 30px hsl(316 100% 65% / 0.3);
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Animation Durations */
+    --transition-cyber: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: all 0.4s ease-in-out;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 10 10% 8%;
+    --foreground: 290 100% 95%;
+    --card: 264 15% 12%;
+    --card-foreground: 290 100% 95%;
+    --popover: 264 15% 12%;
+    --popover-foreground: 290 100% 95%;
+    --primary: 316 100% 65%;
+    --primary-foreground: 10 10% 8%;
+    --secondary: 225 100% 70%;
+    --secondary-foreground: 10 10% 8%;
+    --accent: 270 100% 75%;
+    --accent-foreground: 10 10% 8%;
+    --muted: 264 15% 15%;
+    --muted-foreground: 290 20% 65%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 290 100% 95%;
+    --border: 264 30% 25%;
+    --input: 264 30% 18%;
+    --ring: 316 100% 65%;
   }
 }
 
@@ -101,5 +84,192 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Orbitron', monospace;
+    background: var(--gradient-dark);
+    min-height: 100vh;
+  }
+
+  /* Cyberpunk Typography */
+  .cyber-title {
+    @apply text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+    text-shadow: var(--shadow-neon);
+  }
+
+  .cyber-subtitle {
+    @apply text-xl font-medium text-muted-foreground;
+  }
+
+  .neon-text {
+    @apply text-primary;
+    text-shadow: var(--shadow-neon);
+  }
+
+  /* Cyberpunk Components */
+  .cyber-card {
+    @apply bg-card border border-border rounded-lg backdrop-blur-sm;
+    background: linear-gradient(135deg, hsl(264 15% 12% / 0.8), hsl(264 15% 8% / 0.9));
+    box-shadow: var(--shadow-cyber);
+    transition: var(--transition-cyber);
+  }
+
+  .cyber-card:hover {
+    @apply border-primary/50;
+    box-shadow: var(--shadow-neon), var(--shadow-cyber);
+    transform: translateY(-2px);
+  }
+
+  .neon-border {
+    @apply border-2 border-primary;
+    box-shadow: var(--shadow-neon);
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 30px hsl(316 100% 65% / 0.5);
+    transition: var(--transition-glow);
+  }
+
+  .glow-effect:hover {
+    box-shadow: 0 0 40px hsl(316 100% 65% / 0.7);
+  }
+
+  /* Level Progression Styles */
+  .level-node {
+    @apply relative cyber-card p-6 cursor-pointer;
+    background: var(--gradient-cyber);
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .level-node:hover {
+    transform: scale(1.05) translateY(-4px);
+    box-shadow: var(--shadow-neon), 0 10px 30px hsl(316 100% 65% / 0.4);
+  }
+
+  .level-completed {
+    @apply bg-secondary/20 border-secondary;
+    box-shadow: var(--shadow-blue);
+  }
+
+  .level-locked {
+    @apply opacity-50 cursor-not-allowed;
+    filter: grayscale(0.5);
+  }
+
+  /* Character Animation */
+  .cyber-character {
+    @apply transition-all duration-300;
+  }
+
+  .cyber-character:hover {
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  /* Progress Bar */
+  .progress-cyber {
+    @apply bg-muted rounded-full h-3;
+    background: linear-gradient(90deg, hsl(264 15% 15%), hsl(264 15% 20%));
+  }
+
+  .progress-fill {
+    @apply rounded-full h-full transition-all duration-700;
+    background: var(--gradient-neon);
+    box-shadow: var(--shadow-neon);
+  }
+
+  /* Button Variants */
+  .btn-cyber {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+    background: var(--gradient-cyber);
+    box-shadow: var(--shadow-neon);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-cyber:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-neon), 0 8px 25px hsl(316 100% 65% / 0.4);
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+    background: var(--gradient-electric);
+    box-shadow: var(--shadow-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-blue), 0 8px 25px hsl(225 100% 70% / 0.4);
+  }
+
+  /* Animated Background Elements */
+  .cyber-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: -1;
+    background-image: linear-gradient(hsl(316 100% 65% / 0.3) 1px, transparent 1px),
+                      linear-gradient(90deg, hsl(316 100% 65% / 0.3) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: grid-move 20s linear infinite;
+  }
+
+  @keyframes grid-move {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+  }
+
+  /* Floating Particles */
+  .cyber-particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: hsl(316 100% 65%);
+    border-radius: 50%;
+    animation: float 15s infinite linear;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(100vh) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cyber-title {
+      @apply text-2xl;
+    }
+    
+    .level-node {
+      min-height: 80px;
+    }
   }
 }
